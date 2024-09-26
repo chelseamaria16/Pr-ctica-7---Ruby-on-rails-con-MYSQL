@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @estu %>
+
+<div>
+  <%= link_to "Edit this estu", edit_estu_path(@estu) %> |
+  <%= link_to "Back to estus", estus_path %>
+
+  <%= button_to "Destroy this estu", @estu, method: :delete %>
+</div>

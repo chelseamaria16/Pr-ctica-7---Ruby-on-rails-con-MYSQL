@@ -1,0 +1,37 @@
+<%= form_with(model: estu) do |form| %>
+  <% if estu.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(estu.errors.count, "error") %> prohibited this estu from being saved:</h2>
+
+      <ul>
+        <% estu.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :apellido, style: "display: block" %>
+    <%= form.text_field :apellido %>
+  </div>
+
+  <div>
+    <%= form.label :carnet, style: "display: block" %>
+    <%= form.text_field :carnet %>
+  </div>
+
+  <div>
+    <%= form.label :carrera, style: "display: block" %>
+    <%= form.text_field :carrera %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
